@@ -11,6 +11,7 @@
 ###### H6
 
 ```javascript
+//This is comment
 let a = 10;
 function hello() {
   return "Hello World";
