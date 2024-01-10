@@ -21,3 +21,5 @@ function hello() {
   return "Hello World";
 }
 ```
+
+docker build -t ghcr.io/jitpakornr/web:latest
