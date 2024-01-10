@@ -10,9 +10,10 @@ pipeline {
           sh "echo ${env.APP_NAME}"
         }
       }
-      stage('API Test'){
+      stage('Build State (Docker)'){
+        agent{label 'build-server'}
         steps {
-          sh "echo 'Hello World'"
+            sh "docker build -t ghcr.io/jitpakornr/web ."
         }
       }
   }
