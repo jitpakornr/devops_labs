@@ -1,3 +1,7 @@
+### Development Project Workspace
+
+This is My first dev repository
+
 # H1
 
 ## H2
@@ -17,3 +21,5 @@ function hello() {
   return "Hello World";
 }
 ```
+
+docker build -t ghcr.io/jitpakornr/web:latest
