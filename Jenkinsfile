@@ -34,6 +34,12 @@ pipeline {
                 sh "docker rmi ${env.IMAGE_NAME}:${env.BUILD_NUMBER}"
             }
             }
+      }
+      stage('Deploy Stage (K8s)'){
+        agent {label 'deploy-server'}
+        steps {
+          sh  "kubectl apply -f deploy-web.yml"
         }
+      }
   }
 }
