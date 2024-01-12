@@ -39,12 +39,13 @@ pipeline {
         agent {label 'deploy-server'}
         steps {
           script {
-         try {
+            try {
                 sh "kubectl delete -f deploy-web.yml" 
-              } catch (e){}
-         sh "kubectl apply -f deploy-web.yml"   
+              } catch (e){
+                sh "echo can not delete"
+              }
+                sh "kubectl apply -f deploy-web.yml"   
           }
-        
         }
       }
   }
