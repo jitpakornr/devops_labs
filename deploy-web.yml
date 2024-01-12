@@ -15,7 +15,7 @@ spec:
       containers:
         - name: user03-jitpakorn
           image: ghcr.io/jitpakornr/web
-          pullImagePolicy: Always
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
