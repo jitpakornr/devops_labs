@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: user03-jitpakorn
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: user03-jitpakorn
   template:
     metadata:
       labels:
-        app: web
+        app: user03-jitpakorn
     spec:
       containers:
-        - name: web-server
+        - name: user03-jitpakorn
           image: ghcr.io/jitpakornr/web
           ports:
             - containerPort: 80
@@ -21,12 +21,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-service
+  name: user03-jitpakorn
   labels:
-    app: web-service
+    app: user03-jitpakorn
 spec:
   selector:
-    app: web
+    app: user03-jitpakorn
   ports:
     - name: web-port
       protocol: TCP
