@@ -43,8 +43,8 @@ pipeline {
                 sh "kubectl delete -f deploy-web.yml" 
               } catch (e){}
          sh "kubectl apply -f deploy-web.yml"   
-   }
-          sh "kubectl apply -f deploy-web.yml"
+          }
+        
         }
       }
   }
